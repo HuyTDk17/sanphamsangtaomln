@@ -1,0 +1,672 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Kinh tế chính trị</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap"
+      rel="stylesheet">
+    <style>
+  
+:root{--paper:#DCE6DD;--ink:#18262B;--red:#C9342B;--gold:#F2B535;--blue:#2D6A9F;--card:#FBFAF3;--sh:4px 4px 0 var(--ink)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 'Be Vietnam Pro',system-ui,sans-serif}
+h1,h2,.d,.pill b,.bub b{font-family:'Baloo 2','Be Vietnam Pro',sans-serif}
+header{max-width:1120px;margin:0 auto;padding:22px 16px 6px;display:flex;gap:16px;align-items:center}
+.star{filter:drop-shadow(3px 3px 0 #18262B);flex:none}
+.star i{display:block;width:56px;height:56px;background:var(--gold);clip-path:polygon(50% 0,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%)}
+h1{margin:0;font-size:clamp(30px,6vw,54px);font-weight:800;line-height:1}
+header p{margin:4px 0 0;font-size:15px}
+nav{max-width:1120px;margin:12px auto 6px;padding:0 16px;display:flex;flex-wrap:wrap;gap:10px}
+.tab,.btn{font:600 15px 'Be Vietnam Pro',sans-serif;padding:9px 14px;border:3px solid var(--ink);border-radius:6px;color:var(--ink);box-shadow:3px 3px 0 var(--ink);cursor:pointer}
+.tab{background:var(--card)}
+.tab[aria-selected=true]{background:var(--red);color:#fff;transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink)}
+.btn{background:var(--gold);font-size:14px;padding:8px 12px}
+.btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink)}
+:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+main{max-width:1120px;margin:0 auto;padding:10px 16px 40px}
+.lab{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:20px}
+.lab[hidden]{display:none}
+@media(max-width:860px){.lab{grid-template-columns:1fr}}
+.hint{margin:0 0 10px;font-weight:600}
+.stage{position:relative;border:3px solid var(--ink);border-radius:10px;background-color:#EEF3EA;background-image:linear-gradient(rgba(24,38,43,.09) 1px,transparent 1px),linear-gradient(90deg,rgba(24,38,43,.09) 1px,transparent 1px);background-size:28px 28px;box-shadow:var(--sh);overflow:hidden}
+aside{background:var(--card);border:3px solid var(--ink);border-radius:10px;padding:14px 16px;box-shadow:var(--sh);align-self:start}
+aside h2{margin:0 0 4px;font-size:23px;font-weight:800}
+aside p{margin:7px 0;font-size:14.5px}
+.msg{margin:14px 0 0;padding:10px 12px;border-left:6px solid var(--blue);background:var(--card);min-height:3.4em}
+.read{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.pill{background:var(--card);border:3px solid var(--ink);border-radius:6px;padding:6px 11px;font-size:13.5px;font-weight:600}
+.pill b{display:block;font-size:22px;line-height:1.1}
+.row{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+/* lab 1 */
+.card{position:absolute;width:140px;padding:9px 10px;background:var(--card);border:3px solid var(--ink);border-radius:6px;box-shadow:3px 3px 0 var(--ink);font-weight:600;font-size:14px;line-height:1.3;cursor:grab;user-select:none;z-index:2}
+.card.ok{background:#CFE8C6}
+.lift{cursor:grabbing;box-shadow:7px 7px 0 var(--ink);z-index:9}
+.shake{animation:sk .35s}
+@keyframes sk{25%{translate:-7px}75%{translate:7px}}
+.zones{position:absolute;left:10px;right:10px;bottom:10px;display:flex;gap:10px}
+.zone{flex:1;height:150px;border:3px dashed var(--ink);border-radius:8px;padding:8px;font-weight:700;font-size:14px;background:rgba(251,250,243,.65)}
+.zone:nth-child(1){border-color:var(--red)}
+.zone:nth-child(2){border-color:var(--blue)}
+.zone:nth-child(3){border-style:solid;background:var(--gold)}
+.zone small{display:block;font-weight:500;font-size:12.5px;margin-top:2px}
+/* lab 2 */
+#s2{padding:18px 14px 20px}
+#bar{position:relative;height:64px;margin:30px 10px 26px;border:3px solid var(--ink);background:repeating-linear-gradient(90deg,transparent 0 calc(6.25% - 1px),rgba(24,38,43,.25) calc(6.25% - 1px) 6.25%),#fff}
+.seg{position:absolute;top:0;bottom:0;color:#fff;font-weight:600;font-size:13px;padding:8px;overflow:hidden;white-space:nowrap}
+#segt{left:0;background:var(--blue)}
+#segm{background:var(--red)}
+.hd{position:absolute;width:20px;margin-left:-10px;background:var(--gold);border:3px solid var(--ink);border-radius:5px;cursor:ew-resize;touch-action:none;z-index:3}
+#ht{top:-16px;bottom:34px}
+#hT{top:32px;bottom:-16px}
+.hd::before{content:attr(data-l);position:absolute;top:50%;transform:translateY(-50%);left:calc(100% + 6px);font-weight:700;font-size:14px}
+#ht::before{left:auto;right:calc(100% + 6px)}
+.tk{display:flex;justify-content:space-between;margin:0 10px;font-size:12px}
+/* lab 3 */
+#s3{height:440px}
+.bub{position:absolute;border-radius:50%;border:3px solid var(--ink);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;font-weight:600;font-size:12px;line-height:1.15;cursor:grab;user-select:none;box-shadow:3px 3px 0 var(--ink);padding:2px;z-index:2}
+.bub b{font-size:19px}
+.meter{height:18px;border:3px solid var(--ink);background:#fff;margin-top:12px}
+.meter i{display:block;height:100%;background:var(--red);width:0;transition:width .25s}
+/* lab 4 */
+#svg{display:block;width:100%;height:auto}
+#svg text{font:600 12px 'Be Vietnam Pro',sans-serif;fill:var(--ink)}
+.h4{cursor:ew-resize;touch-action:none;stroke:var(--ink);stroke-width:3}
+.zones.v{flex-direction:column;gap:8px}
+.zones.v .zone{flex:none;height:88px;overflow:hidden;background:rgba(251,250,243,.65);border:3px dashed var(--ink)}
+.zones.v .zone.ok{background:#CFE8C6;border-style:solid}
+.coin{position:absolute;width:38px;height:38px;border-radius:50%;background:var(--gold);border:3px solid var(--ink);box-shadow:2px 2px 0 var(--ink);font-weight:700;display:grid;place-items:center;cursor:grab;user-select:none;z-index:2}
+.steps{margin:0 0 12px;padding-left:22px;font-weight:500}
+.steps li{margin:2px 0}
+input[type=range]{width:100%;accent-color:var(--red)}
+.bl{margin:10px 0 0;font-weight:600;font-size:14px}
+details{margin-top:12px;font-size:14px}
+summary{cursor:pointer;font-weight:600}
+footer{max-width:1120px;margin:0 auto;padding:0 16px 30px;font-size:13.5px}
+@media(prefers-reduced-motion:reduce){.shake{animation:none}.meter i{transition:none}}
+</style>
+  </head>
+  <body>
+    <header>
+      <div class="star" aria-hidden="true"><i></i></div>
+      <div>
+        <h1>Kinh tế chính trị</h1>
+        
+      </div>
+    </header>
+    <nav role="tablist" aria-label="Chọn bàn thực hành">
+      <button class="tab" role="tab" data-t="l5">Lịch sử tư tưởng</button>
+      <button class="tab" role="tab" data-t="l1">Hàng hóa và tiền</button>
+      <button class="tab" role="tab" data-t="l2">Giá trị thặng dư</button>
+      <button class="tab" role="tab" data-t="l3">Độc quyền</button>
+      <button class="tab" role="tab" data-t="l4">Cung cầu</button>
+      <button class="tab" role="tab" data-t="l6">Cán cân lợi ích</button>
+      <button class="tab" role="tab" data-t="l7">CNH và hội nhập</button>
+    </nav>
+    <main>
+
+      <section class="lab" id="l1">
+        <div>
+          <p class="hint">Kéo từng thẻ vào ô phù hợp. Hàng hóa có thể kéo tiếp
+            vào quầy bán để đổi ra tiền.</p>
+          <div class="stage" id="s1">
+            <div class="zones">
+              <div class="zone">Hàng hóa<small>sản phẩm lao động, để trao
+                  đổi</small></div>
+              <div class="zone">Không phải hàng hóa<small>không để mua
+                  bán</small></div>
+              <div class="zone">Quầy bán<small>hàng đổi ra tiền
+                  (H–T)</small></div>
+            </div>
+          </div>
+          <div class="read">
+            <div class="pill"><b id="p1">0/8</b>đã xử lý</div>
+            <div class="pill"><b id="c1">0 đ</b>tiền thu được</div>
+          </div>
+          <p class="msg" id="m1" aria-live="polite">Bắt đầu bằng thẻ nào bạn
+            thấy dễ nhất.</p>
+        </div>
+        <aside>
+          <h2>Hàng hóa và tiền tệ</h2>
+          <p><b>Hàng hóa</b> là sản phẩm của lao động, thỏa mãn nhu cầu qua trao
+            đổi, mua bán. Phải có giá trị sử dụng và được làm ra để bán.</p>
+          <p><b>Hai thuộc tính:</b> giá trị sử dụng (tự nhiên) và giá trị (xã
+            hội, là lao động kết tinh).</p>
+          <p><b>Tiền tệ</b> là hàng hóa đặc biệt, làm vật ngang giá chung. Giá
+            cả là giá trị biểu hiện bằng tiền.</p>
+          <p><b>Dịch vụ</b> là hàng hóa vô hình: có hao phí lao động và thỏa mãn
+            nhu cầu.</p>
+        </aside>
+      </section>
+
+      <section class="lab" id="l2" hidden>
+        <div>
+          <ol class="steps">
+            <li>Mỗi giờ làm việc, công nhân tạo ra <b>0,5 $</b> giá trị
+              mới.</li>
+            <li>Tiền lương chỉ đủ để bù phần giờ <b
+                style="color:var(--blue)">màu xanh</b>.</li>
+            <li>Phần giờ <b style="color:var(--red)">màu đỏ</b> là làm không
+              công. Giá trị tạo ra ở đó chính là giá trị thặng dư.</li>
+          </ol>
+          <p class="hint">Kéo núm t để đổi số giờ bù lương, kéo núm T để đổi độ
+            dài ngày làm.</p>
+          <div class="stage" id="s2">
+            <div id="bar">
+              <div class="seg" id="segt">Bù lương</div>
+              <div class="seg" id="segm">Làm không công</div>
+              <div class="hd" id="ht" data-l="t" role="slider" tabindex="0"
+                aria-label="Số giờ bù lương t" aria-valuemin="0.5"
+                aria-valuemax="16"></div>
+              <div class="hd" id="hT" data-l="T" role="slider" tabindex="0"
+                aria-label="Độ dài ngày làm T" aria-valuemin="4"
+                aria-valuemax="16"></div>
+            </div>
+            <div
+              class="tk"><span>0h</span><span>4h</span><span>8h</span><span>12h</span><span>16h</span></div>
+            <div class="read">
+              <div class="pill"><b id="r_N"></b>giá trị công nhân làm ra</div>
+              <div class="pill"><b id="r_v"></b>tiền lương nhận (v)</div>
+              <div class="pill"><b id="r_m"></b>phần chủ giữ (thặng dư m)</div>
+              <div class="pill"><b id="r_mp"></b>mức bóc lột m' = m ÷ v</div>
+            </div>
+            <details><summary>Xem thêm: c, G và tỷ suất lợi nhuận</summary><p
+                id="x2"></p></details>
+          </div>
+          <div class="row">
+            <button class="btn" id="b_abs">Cách 1: bắt làm thêm 2 giờ</button>
+            <button class="btn" id="b_rel">Cách 2: máy móc/AI, giờ bù lương giảm
+              một nửa</button>
+            <button class="btn" id="b_rs">Đặt lại</button>
+          </div>
+          <p class="msg" id="m2" aria-live="polite"></p>
+        </div>
+        <aside>
+          <h2>Đọc nhanh</h2>
+          <p><b>Giá trị thặng dư (m)</b> là phần giá trị công nhân làm ra nhưng
+            không được trả lương.</p>
+          <p><b>Tiền lương</b> là giá cả của sức lao động, chỉ đủ để công nhân
+            sống và đi làm tiếp.</p>
+          <p>Muốn tăng m, nhà tư bản có hai đường. <b>Tuyệt đối:</b> kéo dài
+            ngày làm. <b>Tương đối:</b> làm giờ bù lương ngắn lại nhờ năng suất
+            tăng.</p>
+          <p>Hãng nào dùng máy mới trước sẽ có giá thành thấp hơn giá bán chung,
+            và hưởng thêm <b>giá trị thặng dư siêu ngạch</b> (chỉ tạm thời).</p>
+        </aside>
+      </section>
+
+      <section class="lab" id="l3" hidden>
+        <div>
+          <p class="hint">Kéo một hãng chồng lên hãng khác để sáp nhập, rồi xem
+            giá thị trường thay đổi. Chỉ số giá 100 là mức khi cạnh tranh đầy
+            đủ, độc quyền càng cao thì giá càng bị đẩy lên.</p>
+          <div class="stage" id="s3"></div>
+          <div class="read">
+            <div class="pill"><b id="n3">8</b>hãng còn lại</div>
+            <div class="pill"><b id="t3">0%</b>thị phần lớn nhất</div>
+            <div class="pill"><b id="h3">0</b>chỉ số tập trung</div>
+            <div class="pill"><b id="pr3">0</b>chỉ số giá</div>
+          </div>
+          <div class="meter" aria-hidden="true"><i id="mt3"></i></div>
+          <p class="msg"><b id="lv3"></b><br><span id="m3"
+              aria-live="polite"></span></p>
+          <div class="row">
+            <button class="btn" id="b3k">Khủng hoảng kinh tế</button>
+            <button class="btn" id="b3s">Nhà nước tách hãng lớn nhất</button>
+            <button class="btn" id="b3r">Đặt lại</button>
+          </div>
+        </div>
+        <aside>
+          <h2>Cạnh tranh và độc quyền</h2>
+          <p><b>Vì sao có độc quyền:</b> lực lượng sản xuất phát triển, cạnh
+            tranh dẫn tới thâu tóm, khủng hoảng làm hãng nhỏ phá sản.</p>
+          <p><b>Hình thức:</b> Cartel (thỏa thuận giá), Syndicate (thống nhất
+            lưu thông), Trust (thống nhất cả sản xuất và lưu thông), Consortium
+            (ngân hàng cùng công nghiệp), Conglomerate (đa ngành).</p>
+          <p><b>Tác động:</b> có sức mạnh để đầu tư khoa học kỹ thuật, nhưng gây
+            thiệt cho người tiêu dùng và kìm hãm tiến bộ.</p>
+        </aside>
+      </section>
+
+      <section class="lab" id="l4" hidden>
+        <div>
+          <ol class="steps">
+            <li><b>Giá trị</b> (đường đứt) là hao phí lao động để làm ra hàng
+              hóa. Mốc này không đổi.</li>
+            <li><b>Giá cả</b> (chấm vàng) là mức giá thật khi người mua và người
+              bán gặp nhau.</li>
+            <li>Thử kéo núm xanh (người muốn mua) và núm đỏ (hàng đem bán) sang
+              trái hoặc phải.</li>
+          </ol>
+          <div class="stage">
+            <svg id="svg" viewBox="0 0 400 300" role="img"
+              aria-label="Đồ thị cung cầu">
+              <defs><clippath id="cp"><rect x="40" y="20" width="340"
+                    height="250" /></clippath></defs>
+              <line x1="40" y1="270" x2="380" y2="270" stroke="#18262B"
+                stroke-width="3" />
+              <line x1="40" y1="20" x2="40" y2="270" stroke="#18262B"
+                stroke-width="3" />
+              <text x="300" y="290">Số lượng hàng</text><text x="46"
+                y="16">Giá</text>
+              <line x1="40" y1="145" x2="380" y2="145" stroke="#18262B"
+                stroke-width="2" stroke-dasharray="6 5" />
+              <text x="46" y="162">Giá trị</text>
+              <g clip-path="url(#cp)">
+                <line id="dl" stroke="#2D6A9F" stroke-width="5" />
+                <line id="sl" stroke="#C9342B" stroke-width="5" />
+              </g>
+              <line id="gx" stroke="#18262B" stroke-width="2"
+                stroke-dasharray="3 4" />
+              <line id="gy" stroke="#18262B" stroke-width="2"
+                stroke-dasharray="3 4" />
+              <circle id="eq" r="8" fill="#F2B535" stroke="#18262B"
+                stroke-width="3" />
+              <circle id="dh" class="h4" r="12" fill="#2D6A9F" tabindex="0"
+                role="slider" aria-label="Người muốn mua" />
+              <circle id="sh" class="h4" r="12" fill="#C9342B" tabindex="0"
+                role="slider" aria-label="Hàng đem bán" />
+              <text id="tcd" fill="#2D6A9F">Cầu: người muốn mua</text>
+              <text id="tcs" text-anchor="end" fill="#C9342B">Cung: hàng đem
+                bán</text>
+            </svg>
+          </div>
+          <p class="bl">Người muốn mua (cầu)</p><div class="meter"><i id="bdi"
+              style="background:var(--blue)"></i></div>
+          <p class="bl">Hàng đem bán (cung)</p><div class="meter"><i
+              id="bsi"></i></div>
+          <div class="read">
+            <div class="pill"><b id="r4p"></b>giá đang bán (giá trị = 50)</div>
+            <div class="pill"><b id="r4d"></b>chênh so với giá trị</div>
+            <div class="pill"><b id="r4q"></b>số hàng bán được</div>
+          </div>
+          <p class="msg" id="m4" aria-live="polite"></p>
+          <div class="row">
+            <button class="btn" id="b4a">Cho người sản xuất tự tăng giảm hàng
+              theo giá</button>
+            <button class="btn" id="b4r">Đặt lại</button>
+          </div>
+        </div>
+        <aside>
+          <h2>Đọc nhanh</h2>
+          <p><b>Quy luật giá trị:</b> hàng hóa trao đổi theo hao phí lao động xã
+            hội cần thiết, tức là ngang giá.</p>
+          <p>Nhưng giá cả thật lên xuống do <b>cung cầu</b>. Người mua nhiều hơn
+            hàng thì giá lên. Hàng nhiều hơn người mua thì giá xuống.</p>
+          <p>Giá cao thì làm hàng có lãi, nhiều người nhảy vào sản xuất, hàng
+            nhiều lên và giá hạ xuống. Nhờ vậy giá luôn bị kéo về quanh giá
+            trị.</p>
+        </aside>
+      </section>
+
+      <section class="lab" id="l5" hidden>
+        <div>
+          <p class="hint">Kéo mỗi tư tưởng vào đúng trường phái của nó.</p>
+          <div class="stage" id="s5"></div>
+          <p class="msg" id="m5" aria-live="polite"></p>
+        </div>
+        <aside>
+          <h2>Từ trọng thương đến Mác</h2>
+          <p><b>Trọng thương:</b> tiền (vàng, bạc) là của cải. Lợi nhuận đến từ
+            trao đổi không ngang giá.</p>
+          <p><b>Trọng nông (Quesnay):</b> chỉ nông nghiệp tạo ra
+            "sản phẩm ròng".</p>
+          <p><b>Cổ điển Anh:</b> Petty, Smith, Ricardo tìm ra mối liên hệ giữa
+            giá trị và lao động.</p>
+          <p><b>Mác - Lênin:</b> kế thừa, rồi tìm ra quy luật của phương thức
+            sản xuất tư bản chủ nghĩa. Lênin bổ sung lý luận về chủ nghĩa đế
+            quốc.</p>
+        </aside>
+      </section>
+
+      <section class="lab" id="l6" hidden>
+        <div>
+          <p class="hint">Có 12 đồng thu nhập quốc dân. Kéo chúng vào ba nhóm,
+            hoặc bấm nút để Nhà nước tái phân phối.</p>
+          <div class="stage" id="s6" style="height:330px">
+            <div class="zones">
+              <div class="zone">Người lao động<small>thu nhập từ lao
+                  động</small></div>
+              <div class="zone">Doanh nghiệp<small>lợi nhuận để đầu
+                  tư</small></div>
+              <div class="zone">Quỹ phúc lợi<small>an sinh, y tế, giáo
+                  dục</small></div>
+            </div>
+          </div>
+          <div class="read">
+            <div class="pill"><b id="r6a">0</b>người lao động</div>
+            <div class="pill"><b id="r6b">0</b>doanh nghiệp</div>
+            <div class="pill"><b id="r6c">0</b>quỹ phúc lợi</div>
+          </div>
+          <p class="msg" id="m6" aria-live="polite"></p>
+          <div class="row">
+            <button class="btn" id="b6t">Nhà nước tái phân phối</button>
+            <button class="btn" id="b6r">Đặt lại</button>
+          </div>
+        </div>
+        <aside>
+          <h2>Lợi ích kinh tế</h2>
+          <p>Lợi ích kinh tế là động lực trực tiếp của mọi hoạt động: doanh
+            nghiệp cần lợi nhuận, người lao động cần thu nhập.</p>
+          <p>Các lợi ích vừa thống nhất vừa mâu thuẫn. Nhà nước điều hòa bằng
+            thuế lũy tiến, an sinh xã hội và các chương trình mục tiêu.</p>
+          <p>Ở Việt Nam, phân phối chủ yếu theo lao động và hiệu quả, kết hợp
+            vốn, tài sản và phúc lợi. Tăng trưởng phải gắn với công bằng xã
+            hội.</p>
+        </aside>
+      </section>
+
+      <section class="lab" id="l7" hidden>
+        <div>
+          <p class="hint">Phần 1: xếp công nghệ vào đúng cuộc cách mạng công
+            nghiệp. Phần 2: thử độ mở cửa hội nhập.</p>
+          <div class="stage" id="s7"></div>
+          <p class="msg" id="m7" aria-live="polite"></p>
+          <h2 class="d" style="font-size:24px;margin:26px 0 8px">Mở cửa hội nhập
+            đến đâu?</h2>
+          <div class="stage" style="padding:16px">
+            <label for="i7a"><b>Mức độ hội nhập</b></label>
+            <input type="range" id="i7a" min="0" max="100" value="40">
+            <label for="i7b"><b>Sức mạnh nội tại</b> (thể chế, doanh nghiệp,
+              nhân lực)</label>
+            <input type="range" id="i7b" min="0" max="100" value="30">
+            <p class="bl">Cơ hội nhận được: <b id="o7"></b></p><div
+              class="meter"><i id="ob7"
+                style="background:var(--blue)"></i></div>
+            <p class="bl">Rủi ro còn lại: <b id="k7"></b></p><div
+              class="meter"><i id="kb7"></i></div>
+            <p class="bl">Lợi ích ròng: <b id="n7"></b></p>
+          </div>
+          <p class="msg" id="m7b" aria-live="polite"></p>
+        </div>
+        <aside>
+          <h2>CNH-HĐH và hội nhập</h2>
+          <p>Bốn cuộc cách mạng công nghiệp lần lượt là cơ giới hóa, điện khí
+            hóa, tự động hóa và công nghệ số.</p>
+          <p>Công nghiệp hóa ở Việt Nam định hướng XHCN, gắn với kinh tế tri
+            thức, kinh tế thị trường và hội nhập quốc tế.</p>
+          <p>Hội nhập là tất yếu khách quan nhưng không phải bằng mọi giá. Hiệu
+            quả phụ thuộc vào năng lực cạnh tranh và nền kinh tế độc lập, tự
+            chủ.</p>
+        </aside>
+      </section>
+
+    </main>
+    <footer>Nội dung theo slide môn MLN122. Mọi tính toán chạy ngay trên trình
+      duyệt, không cần máy chủ.</footer>
+
+    <script>
+const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)];
+const mk=(t,c,h)=>{const e=document.createElement(t);if(c)e.className=c;if(h!=null)e.innerHTML=h;return e};
+const fm=n=>(+n.toFixed(2)).toLocaleString('vi-VN');
+const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
+const inits={},seen={};
+
+function drag(el,cb={}){
+  el.style.touchAction='none';
+  el.addEventListener('pointerdown',e=>{
+    const st=el.parentElement,r=st.getBoundingClientRect(),ox=e.clientX-r.left-el.offsetLeft,oy=e.clientY-r.top-el.offsetTop;
+    el.setPointerCapture(e.pointerId);el.classList.add('lift');cb.start&&cb.start(el);
+    const mv=v=>{el.style.left=clamp(v.clientX-r.left-ox,0,st.clientWidth-el.offsetWidth)+'px';el.style.top=clamp(v.clientY-r.top-oy,0,st.clientHeight-el.offsetHeight)+'px'};
+    const up=v=>{el.classList.remove('lift');el.removeEventListener('pointermove',mv);el.removeEventListener('pointerup',up);el.removeEventListener('pointercancel',up);cb.end&&cb.end(el,v)};
+    el.addEventListener('pointermove',mv);el.addEventListener('pointerup',up);el.addEventListener('pointercancel',up);
+  });
+}
+
+/* ---------- Lab 1: chợ hàng hóa ---------- */
+inits.l1=()=>{
+  const st=$('#s1'),W=st.clientWidth,zs=$$('.zone',st),solved=new Set();let cash=0;
+  const I=[
+    ['Rau trồng để ăn',0,0,'Làm ra để tự tiêu dùng, không đem trao đổi, mua bán.'],
+    ['Áo len bà đan tặng cháu',0,0,'Là quà tặng, không được làm ra để bán.'],
+    ['Ô tô do nhà máy sản xuất',1,800000000,'Sản phẩm của lao động, có giá trị sử dụng và được làm ra để bán.'],
+    ['Nước sông',0,0,'Có sẵn trong tự nhiên, không do lao động tạo ra.'],
+    ['Lightstick của J97',1,450000,'Sản phẩm lao động, làm ra để bán cho người hâm mộ.'],
+    ['Tool 4lua',1,300000,'Sản phẩm lao động (phần mềm), có người trả tiền để dùng.'],
+    ['Giờ dạy của gia sư',1,200000,'Dịch vụ là hàng hóa vô hình: tốn sức lao động và thỏa mãn nhu cầu.'],
+    ['Chai nước đóng sẵn',1,10000,'Nước đã qua lao động đóng chai để bán, khác với nước sông.']
+  ];
+  const cols=Math.max(2,Math.floor((W-20)/150)),cw=(W-20)/cols;
+  st.style.height=Math.ceil(I.length/cols)*76+200+'px';
+  const msg=(t,bad)=>{const m=$('#m1');m.textContent=t;m.style.borderLeftColor=bad?'var(--red)':'var(--blue)'};
+  const upd=()=>{$('#p1').textContent=solved.size+'/'+I.length;$('#c1').textContent=fm(cash)+' đ'};
+  const hit=c=>{const r=c.getBoundingClientRect(),x=r.left+r.width/2,y=r.top+r.height/2;return zs.findIndex(z=>{const q=z.getBoundingClientRect();return x>q.left&&x<q.right&&y>q.top&&y<q.bottom})};
+  I.forEach((it,i)=>{
+    const c=mk('div','card',it[0]);
+    c.style.left=10+(i%cols)*cw+Math.random()*Math.max(0,cw-150)+'px';
+    c.style.top=10+Math.floor(i/cols)*76+Math.random()*10+'px';
+    c.style.rotate=(Math.random()*4-2)+'deg';
+    st.append(c);
+    drag(c,{start:e=>{e._o=[e.style.left,e.style.top]},end:e=>{
+      const z=hit(e),back=m=>{e.classList.add('shake');e.style.left=e._o[0];e.style.top=e._o[1];msg(m,1);setTimeout(()=>e.classList.remove('shake'),400)};
+      if(z<0){e.classList.remove('ok');solved.delete(i)}
+      else if(z==2){
+        if(it[1]){cash+=it[2];solved.add(i);e.remove();msg('Đã bán '+it[0]+' được '+fm(it[2])+' đ. Hàng hóa đổi thành tiền (H–T), giá cả là giá trị biểu hiện bằng tiền.')}
+        else back(it[0]+' không bán được. '+it[3]);
+      }
+      else if((z==0)===!!it[1]){e.classList.add('ok');solved.add(i);msg('Đúng. '+it[3])}
+      else back('Chưa đúng. '+it[3]);
+      upd();
+      if(solved.size==I.length)msg('Xong cả 8 thẻ. Hàng hóa phải do lao động tạo ra và được làm ra để trao đổi.');
+    }});
+  });
+  upd();
+};
+
+/* ---------- Lab 2: giá trị thặng dư ---------- */
+inits.l2=()=>{
+  const bar=$('#bar'),R=.5,C=24,ht=$('#ht'),hT=$('#hT');let T=12,t=6,tag='';
+  const X=h=>h/16*100+'%';
+  const render=()=>{
+    const v=t*R,m=(T-t)*R,N=T*R,mp=m/v*100;
+    $('#segt').style.width=X(t);$('#segm').style.left=X(t);$('#segm').style.width=X(T-t);
+    ht.style.left=X(t);hT.style.left=X(T);ht.setAttribute('aria-valuenow',t);hT.setAttribute('aria-valuenow',T);
+    $('#r_N').textContent=fm(N)+' $';$('#r_v').textContent=fm(v)+' $';$('#r_m').textContent=fm(m)+' $';$('#r_mp').textContent=fm(mp)+'%';
+    $('#x2').textContent='Nhà tư bản còn bỏ c = '+C+' $ mua bông và bù hao mòn máy; giá trị này chỉ chuyển sang sản phẩm chứ không tăng thêm. Tổng giá trị hàng hóa G = c + v + m = '+fm(C+v+m)+' $. Tỷ suất lợi nhuận p\' = m ÷ (c + v) = '+fm(m/(C+v)*100)+'%.';
+    $('#m2').textContent='Ví dụ: '+fm(T)+' giờ × '+fm(R)+' $ = '+fm(N)+' $ giá trị làm ra. Lương chỉ '+fm(v)+' $, tức bù '+fm(t)+' giờ đầu. '+fm(T-t)+' giờ còn lại làm không công, đem '+fm(m)+' $ vào túi chủ. Mức bóc lột = '+fm(m)+' ÷ '+fm(v)+' = '+fm(mp)+'%. '+tag;
+  };
+  const hd=(h,get,set)=>{
+    h.addEventListener('pointerdown',e=>{
+      h.setPointerCapture(e.pointerId);
+      const mv=v=>{const r=bar.getBoundingClientRect();set(Math.round((v.clientX-r.left)/r.width*32)/2);render()};
+      const up=()=>{h.removeEventListener('pointermove',mv);h.removeEventListener('pointerup',up)};
+      h.addEventListener('pointermove',mv);h.addEventListener('pointerup',up);
+    });
+    h.addEventListener('keydown',e=>{const d={ArrowRight:.5,ArrowLeft:-.5}[e.key];if(d){set(get()+d);render();e.preventDefault()}});
+  };
+  hd(ht,()=>t,h=>{t=clamp(h,.5,T)});
+  hd(hT,()=>T,h=>{T=clamp(h,4,16);t=Math.min(t,T)});
+  $('#b_abs').onclick=()=>{T=Math.min(16,T+2);tag='Cách 1 (tuyệt đối): ngày làm dài ra, giờ bù lương giữ nguyên nên toàn bộ giờ thêm là làm không công.';render()};
+  $('#b_rel').onclick=()=>{t=Math.max(.5,Math.round(t)/2);tag='Cách 2 (tương đối): máy móc làm hàng nuôi sống công nhân rẻ đi, nên số giờ bù lương co lại. Ngày làm vẫn như cũ nhưng giờ làm không công dài ra.';render()};
+  $('#b_rs').onclick=()=>{T=12;t=6;tag='';render()};
+  render();
+};
+
+/* ---------- Lab 3: độc quyền ---------- */
+inits.l3=()=>{
+  const st=$('#s3');let F=[];
+  const N=['Minh Long','Sao Việt','Thành Đạt','An Phát','Hải Nam','Bắc Việt','Cửu Long','Tân Á'],S=[16,14,13,12,12,11,11,11];
+  const dia=s=>Math.round(26+Math.sqrt(s)*9.5),msg=t=>$('#m3').textContent=t;
+  const ctr=e=>({x:e.offsetLeft+e.offsetWidth/2,y:e.offsetTop+e.offsetHeight/2});
+  function paint(f,c){
+    const e=f.e,d=dia(f.s);c=c||ctr(e);
+    e.style.width=e.style.height=d+'px';
+    e.style.left=clamp(c.x-d/2,0,st.clientWidth-d)+'px';e.style.top=clamp(c.y-d/2,0,st.clientHeight-d)+'px';
+    e.style.background=f.s>=50?'var(--red)':f.s>=30?'var(--gold)':'var(--card)';
+    e.style.color=f.s>=50?'#fff':'var(--ink)';
+    e.innerHTML=(d>=64?f.n+'<br>':'')+'<b>'+f.s+'%</b>'+(f.k>1&&d>=74?'<br>'+f.k+' hãng':'');
+  }
+  function stats(){
+    const top=Math.max(...F.map(f=>f.s)),H=F.reduce((a,f)=>a+f.s*f.s,0);
+    $('#n3').textContent=F.length;$('#t3').textContent=top+'%';$('#h3').textContent=fm(H);
+    $('#pr3').textContent=Math.round(100+(H-1250)/100);$('#mt3').style.width=top+'%';
+    $('#lv3').textContent=top>=80?'Độc quyền hoàn toàn':top>=50?'Độc quyền thống trị':top>=30?'Nhóm độc quyền nổi lên':'Cạnh tranh giữa nhiều hãng';
+  }
+  function absorb(big,sm){const c=ctr(big.e);big.s+=sm.s;big.k+=sm.k;sm.e.remove();F=F.filter(f=>f!==sm);paint(big,c)}
+  function addF(n,s,x,y){
+    const e=mk('div','bub');st.append(e);
+    const f={n,s,k:1,e};F.push(f);paint(f,{x,y});
+    drag(e,{end:()=>{
+      const c=ctr(e),o=F.find(g=>g!==f&&Math.hypot(c.x-ctr(g.e).x,c.y-ctr(g.e).y)<(e.offsetWidth+g.e.offsetWidth)/2*.8);
+      if(o){const big=f.s>=o.s?f:o,sm=big===f?o:f;absorb(big,sm);stats();msg(sm.n+' sáp nhập vào '+big.n+'. Vốn tập trung vào tay ít hãng hơn.')}
+    }});
+  }
+  const build=()=>{
+    F.forEach(f=>f.e.remove());F=[];
+    const W=st.clientWidth,H=st.clientHeight,R=Math.min(W,H)*.32;
+    N.forEach((n,i)=>{const a=i/8*Math.PI*2;addF(n,S[i],W/2+Math.cos(a)*R*1.2,H/2+Math.sin(a)*R)});
+    stats();msg('Kéo một hãng chồng lên hãng khác để sáp nhập.');
+  };
+  $('#b3k').onclick=()=>{
+    if(F.length<3)return;
+    const o=[...F].sort((a,b)=>a.s-b.s),big=o[o.length-1];
+    absorb(big,o[0]);absorb(big,o[1]);stats();msg('Khủng hoảng: hai hãng nhỏ nhất phá sản và bị hãng lớn nhất mua lại giá rẻ.');
+  };
+  $('#b3s').onclick=()=>{
+    const big=F.reduce((a,f)=>f.s>a.s?f:a);if(big.s<4)return;
+    const h=Math.floor(big.s/2),c=ctr(big.e);big.s-=h;paint(big);
+    addF(big.n.replace(' (tách)','')+' (tách)',h,c.x+70,c.y+50);stats();msg('Nhà nước can thiệp: tách hãng lớn nhất để hạn chế độc quyền.');
+  };
+  $('#b3r').onclick=build;
+  build();
+};
+
+/* ---------- Lab 4: cung cầu ---------- */
+inits.l4=()=>{
+  const svg=$('#svg'),X=q=>40+q*3.4,Y=p=>270-p*2.5;let sd=0,ss=0,timer;
+  const P=()=>50+.4*(sd-ss),Q=()=>50+.5*(sd+ss),set=(id,o)=>{for(const k in o)$(id).setAttribute(k,o[k])};
+  const line=(id,f)=>set(id,{x1:X(-50),y1:Y(f(-50)),x2:X(150),y2:Y(f(150))});
+  const render=()=>{
+    const p=P(),q=Q(),tr=sd-ss;
+    line('#dl',x=>90-.8*(x-sd));line('#sl',x=>10+.8*(x-ss));
+    set('#dh',{cx:X(20+sd),cy:Y(74)});set('#sh',{cx:X(20+ss),cy:Y(26)});
+    set('#eq',{cx:X(q),cy:Y(p)});set('#gx',{x1:X(q),x2:X(q),y1:Y(p),y2:270});set('#gy',{x1:40,x2:X(q),y1:Y(p),y2:Y(p)});
+    set('#tcd',{x:X(2),y:clamp(Y(90-.8*(2-sd))-12,36,260)});
+    set('#tcs',{x:X(98),y:clamp(Y(10+.8*(98-ss))-12,36,260)});
+    $('#r4p').textContent=fm(p);$('#r4q').textContent=fm(q);$('#r4d').textContent=(p>=50?'+':'−')+fm(Math.abs(p-50));
+    $('#bdi').style.width=50+sd*1.5+'%';$('#bsi').style.width=50+ss*1.5+'%';
+    const a=tr>2?'Người muốn mua nhiều hơn hàng đem bán nên họ tranh nhau, giá bị đẩy lên.':tr<-2?'Hàng đem bán nhiều hơn người muốn mua nên người bán phải hạ giá.':'Người mua và hàng đem bán cân nhau nên giá đúng bằng giá trị.';
+    const b=p>51?' Giá cao hơn giá trị: làm hàng có lãi lớn, nhiều người nhảy vào sản xuất, hàng nhiều lên và kéo giá xuống lại.':p<49?' Giá thấp hơn giá trị: làm hàng bị lỗ, người ta bỏ bớt, hàng ít đi và đẩy giá lên lại.':'';
+    $('#m4').textContent=a+b;
+  };
+  const pt=e=>{const p=svg.createSVGPoint();p.x=e.clientX;p.y=e.clientY;return (p.matrixTransform(svg.getScreenCTM().inverse()).x-40)/3.4};
+  const hd=(id,setv,get)=>{
+    const h=$(id);
+    h.addEventListener('pointerdown',e=>{
+      clearInterval(timer);h.setPointerCapture(e.pointerId);
+      const mv=v=>{setv(clamp(Math.round(pt(v)-20),-30,30));render()};
+      const up=()=>{h.removeEventListener('pointermove',mv);h.removeEventListener('pointerup',up)};
+      h.addEventListener('pointermove',mv);h.addEventListener('pointerup',up);
+    });
+    h.addEventListener('keydown',e=>{const d={ArrowRight:3,ArrowLeft:-3}[e.key];if(d){setv(clamp(get()+d,-30,30));render();e.preventDefault()}});
+  };
+  hd('#dh',v=>sd=v,()=>sd);hd('#sh',v=>ss=v,()=>ss);
+  $('#b4a').onclick=()=>{clearInterval(timer);timer=setInterval(()=>{ss=clamp(ss+(P()-50)*.25,-40,40);render();if(Math.abs(P()-50)<.3)clearInterval(timer)},40)};
+  $('#b4r').onclick=()=>{clearInterval(timer);sd=ss=0;render()};
+  render();
+};
+
+/* ---------- Dùng chung: ô thả và bài ghép ---------- */
+const zof=(c,zs)=>{const r=c.getBoundingClientRect(),x=r.left+r.width/2,y=r.top+r.height/2;return zs.findIndex(z=>{const q=z.getBoundingClientRect();return x>q.left&&x<q.right&&y>q.top&&y<q.bottom})};
+function match(sid,mid,slots,items){
+  const st=$(sid),m=$(mid),W=st.clientWidth,cols=Math.max(2,Math.floor((W-20)/150)),cw=(W-20)/cols,placed=new Set();
+  const zb=mk('div','zones v');
+  slots.forEach(x=>zb.append(mk('div','zone','<b>'+x[0]+'</b><small>'+x[1]+'</small>')));
+  st.append(zb);
+  const zs=$$('.zone',zb);
+  st.style.height=Math.ceil(items.length/cols)*104+slots.length*96+24+'px';
+  const say=(t,bad)=>{m.textContent=t;m.style.borderLeftColor=bad?'var(--red)':'var(--blue)'};
+  items.forEach(it=>{
+    const c=mk('div','card',it[0]),i=items.indexOf(it);
+    c.style.left=10+(i%cols)*cw+Math.random()*Math.max(0,cw-150)+'px';
+    c.style.top=10+Math.floor(i/cols)*104+Math.random()*8+'px';
+    st.append(c);
+    drag(c,{start:e=>{e._o=[e.style.left,e.style.top]},end:e=>{
+      const z=zof(e,zs);
+      if(z<0)return;
+      if(z===it[1]){
+        zs[z].classList.add('ok');zs[z].innerHTML+='<small>✓ '+it[0]+'</small>';e.remove();placed.add(i);
+        say((placed.size==items.length?'Hoàn thành. ':'Đúng. ')+it[2]);
+      }else{
+        e.classList.add('shake');e.style.left=e._o[0];e.style.top=e._o[1];
+        say('Chưa khớp. Xem lại mốc thời gian và nội dung của từng ô.',1);setTimeout(()=>e.classList.remove('shake'),400);
+      }
+    }});
+  });
+  say('Kéo từng thẻ vào ô phù hợp.');
+}
+
+/* ---------- Lab 5: lịch sử tư tưởng ---------- */
+inits.l5=()=>match('#s5','#m5',
+  [['Chủ nghĩa trọng thương','Thế kỷ XV đến cuối XVII'],['Chủ nghĩa trọng nông','Pháp, giữa thế kỷ XVIII'],['Kinh tế chính trị cổ điển Anh','Giữa XVII đến cuối XVIII'],['Kinh tế chính trị Mác - Lênin','Từ những năm 40 thế kỷ XIX']],
+  [['Vàng bạc là của cải thật, xuất khẩu nhiều hơn nhập khẩu để thu vàng',0,'Trọng thương coi tiền là của cải, lợi nhuận là kết quả của trao đổi không ngang giá.'],
+   ['Chỉ nông nghiệp tạo ra sản phẩm ròng (Bảng kinh tế của Quesnay)',1,'Trọng nông cho rằng của cải chỉ sinh ra từ nông nghiệp.'],
+   ['Giá trị do lao động quyết định (Petty, Smith, Ricardo)',2,'Cổ điển Anh là những người đầu tiên nối giá trị với lao động.'],
+   ['Giá trị thặng dư là lao động không công bị tư bản chiếm đoạt',3,'Mác kế thừa kinh tế chính trị cổ điển và chỉ ra bản chất bóc lột của chủ nghĩa tư bản.']]);
+
+/* ---------- Lab 6: cán cân lợi ích ---------- */
+inits.l6=()=>{
+  const st=$('#s6'),zs=$$('.zone',st),n=12;let coins=[];
+  const msg=(t,bad)=>{const m=$('#m6');m.textContent=t;m.style.borderLeftColor=bad?'var(--red)':'var(--blue)'};
+  const cnt=()=>{const a=[0,0,0];coins.forEach(c=>{const z=zof(c,zs);if(z>=0)a[z]++});return a};
+  const spot=(c,z)=>{const q=zs[z].getBoundingClientRect(),s=st.getBoundingClientRect();c.style.left=q.left-s.left+8+Math.random()*Math.max(0,q.width-62)+'px';c.style.top=q.top-s.top+34+Math.random()*Math.max(0,q.height-80)+'px'};
+  const upd=()=>{
+    const a=cnt(),tot=a[0]+a[1]+a[2];let t,bad=1;
+    ['a','b','c'].forEach((k,i)=>$('#r6'+k).textContent=a[i]);
+    if(tot<n){t='Còn '+(n-tot)+' đồng chưa chia. Kéo hết vào ba nhóm.';bad=0}
+    else if(Math.max(...a)>=8)t='Một nhóm giữ gần hết thu nhập: giàu nghèo cách xa, các nhóm khác mất động lực.';
+    else if(a[0]<3)t='Người lao động nhận quá ít: khó đủ sống, không còn động lực làm việc.';
+    else if(a[1]<3)t='Doanh nghiệp lãi quá ít: không có động lực đầu tư mở rộng sản xuất.';
+    else if(a[2]<2)t='Quỹ phúc lợi quá nhỏ: người yếu thế thiếu an sinh.';
+    else{t='Hài hòa: ai cũng có phần xứng đáng, tăng trưởng đi cùng công bằng.';bad=0}
+    msg(t,bad);
+  };
+  const build=()=>{
+    coins.forEach(c=>c.remove());coins=[];
+    for(let i=0;i<n;i++){const c=mk('div','coin','đ');c.style.left=10+(i%6)*46+'px';c.style.top=10+Math.floor(i/6)*46+'px';st.append(c);drag(c,{end:upd});coins.push(c)}
+    upd();
+  };
+  $('#b6t').onclick=()=>{
+    const a=cnt();if(a[0]+a[1]+a[2]<n)return;
+    const mx=a.indexOf(Math.max(...a)),mn=a.indexOf(Math.min(...a));if(mx===mn)return;
+    spot(coins.find(c=>zof(c,zs)===mx),mn);upd();
+  };
+  $('#b6r').onclick=build;
+  build();
+};
+
+/* ---------- Lab 7: CNH-HĐH và hội nhập ---------- */
+inits.l7=()=>{
+  match('#s7','#m7',
+    [['Cách mạng công nghiệp lần 1','Thế kỷ XVIII đến giữa XIX'],['Cách mạng công nghiệp lần 2','Nửa cuối XIX đến đầu XX'],['Cách mạng công nghiệp lần 3','Từ thập niên 60 thế kỷ XX'],['Cách mạng công nghiệp lần 4','Từ đầu thế kỷ XXI']],
+    [['Máy hơi nước, cơ giới hóa ngành dệt',0,'Lần 1 là cơ giới hóa, bắt đầu ở Anh.'],
+     ['Điện năng và dây chuyền lắp ráp của Ford',1,'Lần 2 là điện khí hóa và sản xuất hàng loạt.'],
+     ['Máy tính, công nghệ thông tin, tự động hóa',2,'Lần 3 là tự động hóa và điện tử hóa.'],
+     ['Trí tuệ nhân tạo, big data, in 3D',3,'Lần 4 hội tụ công nghệ số, vật lý và sinh học.']]);
+  const a=$('#i7a'),b=$('#i7b');
+  const f=()=>{
+    const x=+a.value,y=+b.value/100,o=x*(.3+.7*y),k=x*(1-.7*y),net=o-k;
+    $('#o7').textContent=Math.round(o);$('#k7').textContent=Math.round(k);$('#n7').textContent=(net>=0?'+':'−')+Math.round(Math.abs(net));
+    $('#ob7').style.width=o+'%';$('#kb7').style.width=k+'%';
+    $('#m7b').textContent=x==0?'Chưa hội nhập: an toàn nhưng bỏ lỡ thị trường, vốn và công nghệ.'
+      :net<0?'Mở cửa nhanh khi nội lực còn yếu: doanh nghiệp trong nước bị cạnh tranh gay gắt, nền kinh tế dễ phụ thuộc bên ngoài.'
+      :net>=35?'Hội nhập hiệu quả: nội lực đủ mạnh để tận dụng thị trường, vốn và công nghệ.'
+      :'Có lợi nhưng chưa tối ưu: cần nâng nội lực (thể chế, năng lực cạnh tranh, độc lập tự chủ) để hưởng nhiều hơn.';
+  };
+  a.oninput=b.oninput=f;f();
+};
+
+function show(id){
+  $$('.tab').forEach(b=>b.setAttribute('aria-selected',b.dataset.t===id));
+  $$('.lab').forEach(l=>l.hidden=l.id!==id);
+  if(!seen[id]){seen[id]=1;inits[id]()}
+  try{history.replaceState(null,'','#'+id)}catch(e){}
+}
+$$('.tab').forEach(b=>b.onclick=()=>show(b.dataset.t));
+show(inits[location.hash.slice(1)]?location.hash.slice(1):'l5');
+</script>
+  </body>
+</html>
